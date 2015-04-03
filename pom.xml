@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.htwg.sa.chess</groupId>
 	<artifactId>de.htwg.sa.chess.plugins</artifactId>
-	<version>1.0</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
@@ -17,4 +17,19 @@
 			</plugin>
 		</plugins>
 	</build>
+	<dependencies>
+		<dependency>
+			<groupId>de.htwg.sa.chess</groupId>
+			<artifactId>de.htwg.sa.chess</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+	<repositories>
+		<repository>
+			<snapshots />
+			<id>snapshots</id>
+			<name>libs-snapshot</name>
+			<url>http://lenny2.in.htwg-konstanz.de:8081/artifactory/libs-snapshot</url>
+		</repository>
+	</repositories>
 </project>
