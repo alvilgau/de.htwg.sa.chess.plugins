@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>de.htwg.sa.chess</groupId>
-	<artifactId>de.htwg.sa.chess.plugins</artifactId>
+	<groupId>de.htwg.sa.chess.plugins</groupId>
+	<artifactId>chess-status-plugins</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
@@ -11,7 +11,7 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
 				<configuration>
-					<sourc>1.8</sourc>
+					<source>1.8</source>
 					<target>1.8</target>
 				</configuration>
 			</plugin>
@@ -21,7 +21,7 @@
 		<dependency>
 			<groupId>de.htwg.sa.chess</groupId>
 			<artifactId>de.htwg.sa.chess</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>0.0.2-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 	<repositories>

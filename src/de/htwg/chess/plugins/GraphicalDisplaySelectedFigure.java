@@ -1,4 +1,4 @@
-package de.htwg.sa.chess.plugins;
+package de.htwg.chess.plugins;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -17,22 +17,20 @@ import de.htwg.chess.plugin.selectedfigure.IDisplaySelectedFigurePlugin;
  * @since 2015-04-03
  *
  */
-public class TextualDisplaySelectedFigure implements
+public class GraphicalDisplaySelectedFigure implements
 		IDisplaySelectedFigurePlugin {
 
-	private String figureName;
 	private String figurePosition;
 
-	public JPanel createPanel() {
-		return new TextualPanel();
-	}
-
 	public void displayFigure(IFigure figure) {
-		figureName = figure.getFigureName();
-		figurePosition = figure.getStringPositionInformation();
+		figurePosition = figure.getFigureName();
+	}
+	
+	public JPanel createPanel() {
+		return new GrahpicalPanel();
 	}
 
-	private class TextualPanel extends JPanel {
+	private class GrahpicalPanel extends JPanel {
 		private static final long serialVersionUID = 1L;
 		private static final int FONT_SIZE = 16;
 		private static final int GAP = 10;
@@ -40,23 +38,15 @@ public class TextualDisplaySelectedFigure implements
 		private static final int WIDTH = 150;
 		private static final int HEIGHT = 30;
 
-		private JLabel selection;
+		private JLabel picture;
 		private JLabel position;
 
 		/**
 		 * Create a Status Panel
 		 */
-		public TextualPanel() {
+		public GrahpicalPanel() {
 			Font font = new Font("Arial", Font.CENTER_BASELINE, FONT_SIZE);
 			Dimension dimension = new Dimension(WIDTH, HEIGHT);
-
-			selection = new JLabel("Selected figure: ");
-			selection.setFont(font);
-			selection.setFont(font);
-			selection.setMinimumSize(dimension);
-			selection.setPreferredSize(dimension);
-			selection.setMaximumSize(dimension);
-			add(selection);
 
 			position = new JLabel("");
 			position.setFont(font);
@@ -71,13 +61,13 @@ public class TextualDisplaySelectedFigure implements
 		}
 
 		/**
-		 * Sets the text for the position label
+		 * Sets the text for the status label
 		 * 
 		 * @param positionText
-		 *            - current position
+		 *            - current game status
 		 */
 		public void setPosition(String positionText) {
-			position.setText(" Position: " + positionText);
+			position.setText(" Status: " + positionText);
 		}
 	}
 }
