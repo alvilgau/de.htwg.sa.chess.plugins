@@ -9,7 +9,7 @@ import org.apache.log4j.Logger;
 
 import de.htwg.chess.controller.IChessController;
 import de.htwg.chess.model.IFigure;
-import de.htwg.chess.plugins.status.StatusPlugin;
+import de.htwg.chess.plugins.StatusPlugin;
 import de.htwg.util.observer.Event;
 
 public class SelectedFigureStatus implements StatusPlugin {
